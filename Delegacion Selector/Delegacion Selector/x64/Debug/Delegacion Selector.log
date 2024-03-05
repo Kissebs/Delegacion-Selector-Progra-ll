@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\ESCINF\source\repos\Delegacion Selector\Delegacion Selector\main.cpp(6,9): warning C4101: 'peso': variable local sin referencia
+  Delegacion Selector.vcxproj -> C:\Users\ESCINF\source\repos\Delegacion Selector\x64\Debug\Delegacion Selector.exe
