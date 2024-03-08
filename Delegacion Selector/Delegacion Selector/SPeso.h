@@ -2,20 +2,20 @@
 #include "Selector.h"
 class SPeso : public Selector {
 private:
-	double peso;
-
+    double peso;
 public:
-	SPeso(double peso_) : Selector("Selector para edades ") {
-		peso = peso_;
-	}
-	virtual ~SPeso();
 
-	virtual bool seleccionar(Persona& persona_) {
-		if (persona_.getPeso() == peso) {
-			return true;
+    SPeso(double pes) : Selector("Selector por peso."), peso(pes) {}
 
-		}
-		else return false;
-	}
+    virtual ~SPeso(){}
 
+    virtual bool seleccionar(Persona& per) {
+        if (per.getPeso() == peso) {
+            return true;
+        }
+        else {
+            return true;
+        }
+    }
+    virtual string getDescripcion() { return descripcion; }
 };

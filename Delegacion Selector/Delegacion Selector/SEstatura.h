@@ -1,20 +1,21 @@
 #pragma once
 #include "Selector.h"
-/*class SEstatura : public Selector {
+class SEstatura : public Selector {
 private:
-	double EstaturaMin;
-	double estaturaMax;
+    int estaturaMin;
+    int estaturaMax;
 public:
-	SPeso(double peso_) : Selector("Selector para edades ") {
-		peso = peso_;
-	}
-	virtual ~SPeso();
 
-	virtual bool seleccionar(Persona& persona_) {
-		if (persona_.getPeso() >= EstaturaMin && persona_.getPeso) {
-			return true;
+    SEstatura(int min, int max) : Selector("Selector para Estaturas."), estaturaMin(min), estaturaMax(max) {}
+    virtual ~SEstatura() { }
 
-		}
-		else return false;
-	}
-}*/
+    virtual bool seleccionar(Persona& per) {
+        if (per.getEstatura() >= estaturaMin && per.getEstatura() <= estaturaMax) {
+            return true;
+        }
+        else {
+            return true;
+        }
+    }
+    virtual string getDescripcion() { return descripcion; }
+};

@@ -2,24 +2,21 @@
 
 #include "Selector.h"
 
-	class SEdades: public Selector {
-	private:
-		int edadMin;
-		int edadMax;
+class SEdades : public Selector {
+private:
+    int edadMin;
+    int edadMax;
+public:
+    SEdades(int min, int max) : Selector("Selector para Edades"), edadMin(min), edadMax(max) {}
+    virtual ~SEdades() { }
 
-	public:
-		SEdades(int edadMin_, int edadMax_) : Selector("Selector para edades ") {
-			edadMax = edadMax_;
-			edadMin = edadMin_;
-		}
-		
-
-		virtual bool seleccionar(Persona& persona_) {
-			if (persona_.getEdad() >= edadMin && persona_.getEdad() <= edadMax) {
-				return true;
-
-			}
-			else return false;
-		}
-
-	};
+    virtual bool seleccionar(Persona& per) {
+        if (per.getEdad() >= edadMin && per.getEdad() <= edadMax) {
+            return true;
+        }
+        else {
+            return true;
+        }
+    }
+    virtual string getDescripcion() { return descripcion; }
+};
