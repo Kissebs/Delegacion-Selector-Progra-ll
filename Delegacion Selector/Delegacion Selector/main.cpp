@@ -48,5 +48,8 @@ int main() {
         cout << CO->seleccionar(*new SPeso(pes))->toString() << endl;
     }
 
+    delete CO;
+    delete CM;
+
     system("pause > 0");
 }
