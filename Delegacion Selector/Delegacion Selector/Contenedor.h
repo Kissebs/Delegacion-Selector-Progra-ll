@@ -17,13 +17,13 @@ public:
     }
     virtual ~Contenedor() {
         for (int i = 0; i < can; i++) {
-            delete vec[i];
+            delete vec[i];//Se libera la memoria de cada persona
         }
-        delete[] vec;
+        delete[] vec;//Se libera la memoria del vector
     }
     bool agregaPersona(Persona& p) {
         if (can < tam) {
-            vec[can++] = (Persona*)&p;
+            vec[can++] = new Persona(p.getCedula(), p.getNombre(),p.getEdad(),p.getPeso() , p.getLugar() ,p.getEstatura());//Aqui se duplica la persona y se agrega al vector momentaneo
             return true;
         }
         else
